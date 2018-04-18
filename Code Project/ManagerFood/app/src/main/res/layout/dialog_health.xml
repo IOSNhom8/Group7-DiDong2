@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/bg_main"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="left|center">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_setting"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lọc"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center|right">
+
+               <TextView
+                   android:id="@+id/tvCloseDialog"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="right|center"
+                   android:layout_marginRight="10dp"
+                   android:textStyle="bold"
+                   android:textColor="@android:color/white"
+                   android:textSize="18dp"
+                   android:text="Đóng"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="@color/bg_main_setting">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:checked="true"
+                                android:text="Bệnh tiểu đường"/>
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:text="Bệnh cao huyết áp"/>
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:text="Bệnh xương khớp"/>
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:text="Bệnh dạ dày"/>
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:text="Dành cho người ăn chay"/>
+
+                            <RadioButton
+                                style="@style/Radio"
+                                android:text="Dinh dưỡng"/>
+                        </LinearLayout>
+
+                    </RadioGroup>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/bg_main">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Áp dụng"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/bg_main"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="left|center">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_setting"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lọc"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center|right">
+
+               <TextView
+                   android:id="@+id/tvCloseDialog"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="right|center"
+                   android:layout_marginRight="10dp"
+                   android:textStyle="bold"
+                   android:textColor="@android:color/white"
+                   android:textSize="18dp"
+                   android:text="Đóng"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="@color/bg_main_setting">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@android:color/black"
+                            android:text="Món"/>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:checked="true"
+                                    android:text="Món nướng"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món kho"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món chiên"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món canh"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món xào"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món luộc"/>
+
+                                <RadioButton
+                                    style="@style/Radio"
+                                    android:text="Món nhanh"/>
+
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@android:color/black"
+                            android:text="Thể loại"/>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:checked="true"
+                                    android:text="30 - 50 K"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="50 - 100 K"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="150 - 150 K"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="Dễ"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="Đẹp mắt"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="Siêu ngon"/>
+
+                                <RadioButton
+                                    style="@style/RadioType"
+                                    android:text="Làm nhanh"/>
+
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/bg_main">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Áp dụng"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

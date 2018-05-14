@@ -39,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sức khỏe  "
-                        android:textSize="20dp"
+                        android:textSize="16dp"
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"/>
@@ -52,12 +52,6 @@
                     android:layout_weight="1"
                     android:gravity="center|right">
 
-                    <ImageView
-                        android:id="@+id/imgSetting"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_setting"/>
                     <ImageView
                         android:id="@+id/img_return_home_health"
                         android:layout_width="25dp"
@@ -84,41 +78,13 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="5dp"
-                            android:background="@android:color/white"
-                            android:orientation="horizontal">
 
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:drawableLeft="@drawable/web"
-                                    android:drawablePadding="10dp"
-                                    android:textColor="@color/bg_main"
-                                    android:textStyle="bold"
-                                    android:text="Đề xuất"/>
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/recyclerView_top"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@android:color/white"
-                            android:orientation="horizontal" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center"
                             android:background="@android:color/white">
 
                             <LinearLayout
@@ -135,14 +101,28 @@
                                     android:drawablePadding="10dp"
                                     android:textColor="@color/bg_main"
                                     android:textStyle="bold"
-                                    android:text="Sức khỏe của mọi nhà"/>
+                                    android:text="Danh Sách"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center|right"
+                                android:paddingRight="5dp"
+                                android:layout_weight="1">
+
+                                <Spinner
+                                    android:id="@+id/spinnerHearth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"></Spinner>
+
                             </LinearLayout>
 
 
                         </LinearLayout>
 
                         <android.support.v7.widget.RecyclerView
-                            android:id="@+id/recyclerView_homeProduct"
+                            android:id="@+id/recyclerView_HearthMain"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@android:color/white"

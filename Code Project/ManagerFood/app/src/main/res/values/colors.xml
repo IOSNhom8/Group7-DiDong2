@@ -7,4 +7,8 @@
     <color name="bg_main">#ad1b5d</color>
     <color name="bg_main_change">#7949cc</color>
     <color name="bg_main_setting">#c6c4c6</color>
+
+    <color name="bg_detail">#6395b3</color>
+    <color name="btn_login">#fad8ad</color>
+    <color name="red">#f1388b</color>
 </resources>

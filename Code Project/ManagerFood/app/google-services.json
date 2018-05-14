@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "247942580834",
+    "firebase_url": "https://managerfood-8b768.firebaseio.com",
+    "project_id": "managerfood-8b768",
+    "storage_bucket": "managerfood-8b768.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247942580834:android:41f6b102e60abac3",
+        "android_client_info": {
+          "package_name": "com.example.trile.managerfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247942580834-gojgvd4g4t0i1vlp4o1euajl9a1qqq59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx6Cz177T6eyqR2W05TH0heL9oeGQguoE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

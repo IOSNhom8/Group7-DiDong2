@@ -1,6 +1,8 @@
 package com.example.trile.managerfood.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.trile.managerfood.DetailCookActivity;
 import com.example.trile.managerfood.Models.md_main_ds;
 import com.example.trile.managerfood.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -35,10 +39,23 @@ public class Adapter_ds_main extends RecyclerView.Adapter<Adapter_ds_main.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(Adapter_ds_main.ViewHolder holder, int position) {
-        holder.img.setImageResource(arrayList.get(position).getImg());
+    public void onBindViewHolder(Adapter_ds_main.ViewHolder holder, final int position) {
         holder.tvName.setText(arrayList.get(position).getName());
         holder.tvDesciption.setText(arrayList.get(position).getDesciption());
+        Picasso.with(context).load(arrayList.get(position).getImg()).into(holder.img);
+
+
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(context, DetailCookActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("tour",arrayList.get(position).getName());
+                myIntent.putExtra("bundle", bundle);
+                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     @Override

@@ -5,25 +5,27 @@ package com.example.trile.managerfood.Models;
  */
 
 public class md_suggest {
-    private int img;
+    private String img;
     private String name;
     private String descip;
+    private String type;
 
     public md_suggest() {
         //
     }
 
-    public md_suggest(int img, String name, String descip) {
+    public md_suggest(String img, String name, String descip, String type) {
         this.img = img;
         this.name = name;
         this.descip = descip;
+        this.type = type;
     }
 
-    public int getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
@@ -41,5 +43,13 @@ public class md_suggest {
 
     public void setDescip(String descip) {
         this.descip = descip;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

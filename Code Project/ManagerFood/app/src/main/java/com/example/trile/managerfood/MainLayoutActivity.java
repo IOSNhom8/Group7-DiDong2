@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.auth.FirebaseAuth;
+
+
 public class MainLayoutActivity extends AppCompatActivity {
 
 
@@ -18,6 +22,7 @@ public class MainLayoutActivity extends AppCompatActivity {
     LinearLayout menu2;
     LinearLayout menu3;
     LinearLayout menu4;
+    LinearLayout menu5;
 
 
     @Override
@@ -29,6 +34,7 @@ public class MainLayoutActivity extends AppCompatActivity {
         menu2 = (LinearLayout) findViewById(R.id.menu_food);
         menu3 = (LinearLayout) findViewById(R.id.menu_heart);
         menu4 = (LinearLayout) findViewById(R.id.menu_list);
+        menu5 = (LinearLayout) findViewById(R.id.menu_LogOut);
 
         menu1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +66,14 @@ public class MainLayoutActivity extends AppCompatActivity {
                 Toast();
                 Intent intentCook = new Intent(MainLayoutActivity.this, CookActivity.class);
                 startActivity(intentCook);
+            }
+        });
+
+        menu5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Đăng xuất tài khoản thành công", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
 

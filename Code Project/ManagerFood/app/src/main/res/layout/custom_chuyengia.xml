@@ -2,6 +2,8 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:padding="0.5dp"
     android:layout_height="wrap_content">
 
     <LinearLayout
@@ -15,13 +17,27 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="130dp"
                 android:orientation="horizontal"
                 android:padding="5dp">
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_mon"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@mipmap/ga_chien"
+                        android:background="@color/colorAccent"
+                        android:padding="1dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
@@ -30,34 +46,21 @@
 
                     <TextView
                         android:id="@+id/tv_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="255dp"
+                        android:layout_height="22dp"
                         android:textColor="@color/bg_main"
-                        android:textSize="20dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
-                        android:text="Cánh gà chiên nước mắm"/>
+                        android:text="Cánh gà chiên nước mắm sssssssssssss"/>
 
                     <TextView
                         android:id="@+id/tv_desciption"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="255dp"
+                        android:layout_height="50dp"
                         android:text="Nguyên liệu : "/>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:id="@+id/img_mon"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@mipmap/ga_chien"/>
-
-                </LinearLayout>
 
             </LinearLayout>
 

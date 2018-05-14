@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/menu"
     android:orientation="vertical"
     tools:context="com.example.trile.managerfood.MainLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1.3">
 
         <ImageView
             android:layout_width="match_parent"
@@ -18,20 +19,21 @@
             android:src="@mipmap/bg"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:paddingTop="60dp"
-        android:paddingBottom="40dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
         android:paddingLeft="36dp"
         android:paddingRight="36dp"
-        android:orientation="vertical">
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="10"
             android:orientation="horizontal">
 
 
@@ -39,25 +41,24 @@
                 android:id="@+id/menu_cook"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:background="@drawable/click_menu"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_cook"/>
-
+                    android:src="@drawable/ic_cook" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Chuyên gia"
-                    android:textStyle="bold"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -65,24 +66,25 @@
                 android:id="@+id/menu_food"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:orientation="vertical"
+                android:layout_weight="1"
                 android:background="@drawable/click_menu"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_food"/>
+                    android:src="@drawable/ic_food" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Gợi ý"
                     android:textColor="@android:color/white"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:text="Gợi ý"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -91,67 +93,97 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
+            android:layout_weight="10"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/menu_heart"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/click_menu"
                 android:gravity="center"
-                android:background="@drawable/click_menu">
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_heart"/>
+                    android:src="@drawable/ic_heart" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Sức khỏe"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:text="Sức khỏe"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/menu_list"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/click_menu"
                 android:gravity="center"
-                android:background="@drawable/click_menu">
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_list"/>
+                    android:src="@drawable/ic_list" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Danh sách"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:text="Danh sách"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
-
         </LinearLayout>
-
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="250dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/menu_LogOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/click_menu"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng Xuất"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="@color/bg_main"
-        android:layout_weight="0.3"></LinearLayout>
+        android:layout_weight="0.3"></LinearLayout>-->
 
 </LinearLayout>

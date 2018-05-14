@@ -1,6 +1,8 @@
 package com.example.trile.managerfood.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.trile.managerfood.Models.md_top_ds;
+import com.example.trile.managerfood.DetailCookActivity;
+import com.example.trile.managerfood.Models.md_main_ds;
 import com.example.trile.managerfood.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -19,10 +23,10 @@ import java.util.ArrayList;
 
 public class Adapter_ds_top extends RecyclerView.Adapter<Adapter_ds_top.ViewHolder> {
 
-    ArrayList<md_top_ds> arrTop;
+    ArrayList<md_main_ds> arrTop;
     Context context;
 
-    public Adapter_ds_top(ArrayList<md_top_ds> arrTop, Context context) {
+    public Adapter_ds_top(ArrayList<md_main_ds> arrTop, Context context) {
         this.arrTop = arrTop;
         this.context = context;
     }
@@ -35,9 +39,21 @@ public class Adapter_ds_top extends RecyclerView.Adapter<Adapter_ds_top.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.img.setImageResource(arrTop.get(position).getImg());
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+
+        Picasso.with(context).load(arrTop.get(position).getImg()).into(holder.img);
         holder.tvName.setText(arrTop.get(position).getName());
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(context, DetailCookActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("tour",arrTop.get(position).getName());
+                myIntent.putExtra("bundle", bundle);
+                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(myIntent);
+            }
+        });
     }
 
     @Override
